@@ -7,9 +7,11 @@
     border: 1px solid black ;
     display: inline-block;
     padding: 15px;
+    color: white;
+    font-weight: 800;
 }
-#blue{
-    background-color: blue;
+#black{
+    background-color: black;
 }
 #green{
     background-color: green;
@@ -20,4 +22,13 @@
 #red{
     background-color: red;
 
+}
+
+.pixel {
+    border:1px solid black;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    display: inline-block;
 }
