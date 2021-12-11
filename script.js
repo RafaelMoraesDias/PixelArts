@@ -4,6 +4,7 @@ function blackColor (){
     let preto = document.querySelector("#black")
 
 }
+//exercicio feito com ajuda dos amigos na sala de estudo da madrugada
 
 const blackButton = document.getElementById('black');
 const greenButton = document.getElementById('green');
@@ -19,9 +20,27 @@ function changeClass(event){
     let corSelecionada = document.getElementsByClassName("selected")[0];
     corSelecionada.classList.remove("selected");
     event.target.classList.add("selected");
-
-
 }
+
+//exercicio feito com ajuda dos amigos na sala de estudo da madrugada
+
+
+   let quadroPixel = document.getElementsByClassName("pixel")
+   for(let i = 0; i < quadroPixel.length; i+=1){
+    quadroPixel[i].addEventListener('click', mudaCor); 
+ }
+
+ function mudaCor (event){
+    let pincel = document.querySelector('.selected').id;
+    event.target.style.backgroundColor = pincel;  
+
+ }
+
+
+
+
+   
+ 
 
 
 
