@@ -36,6 +36,18 @@ function changeClass(event){
 
  }
 
+ 
+ let button = document.querySelector("#clear-board")
+
+ button.addEventListener ("click", limpaQuadro)
+
+ function limpaQuadro (event){
+     let clear = document.querySelectorAll(".pixel")
+     for (let i of clear){
+         i.style.backgroundColor ="white";
+     }
+ }
+ 
 
 
 
