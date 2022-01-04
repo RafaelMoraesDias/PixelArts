@@ -1,5 +1,9 @@
 window.onload = blackColor;
 
+geraQuadro(5);
+
+
+
 function blackColor (){
     let preto = document.querySelector("#black")
 
@@ -22,14 +26,6 @@ function changeClass(event){
     event.target.classList.add("selected");
 }
 
-//exercicio feito com ajuda dos amigos na sala de estudo da madrugada
-
-
-   let quadroPixel = document.getElementsByClassName("pixel")
-   for(let i = 0; i < quadroPixel.length; i+=1){
-    quadroPixel[i].addEventListener('click', mudaCor); 
- }
-
  function mudaCor (event){
     let pincel = document.querySelector('.selected').id;
     event.target.style.backgroundColor = pincel;  
@@ -43,27 +39,44 @@ function changeClass(event){
 
  function limpaQuadro (event){
      let clear = document.querySelectorAll(".pixel")
-     for (let i of clear){
-         i.style.backgroundColor ="white";
+     for (let index of clear){
+         index.style.backgroundColor ="white";
      }
  }
- 
 
+ //gerar quadro
 
+let vqv = document.querySelector("#generate-board");
 
-   
- 
+vqv.addEventListener("click", verificaQuadro);
 
+    
+function geraQuadro(number){
+    let quadro = document.getElementById("pixel-board")
+    quadro.innerHTML ="";
+    for (let l = 0; l< number; l+=1){
+     let secao = document.createElement("section");
+        quadro.appendChild(secao);
+        for (let col = 0 ; col< number; col+=1){
+            let divv = document.createElement("div");
+            divv.addEventListener('click', mudaCor);
+            divv.className = "pixel";
+            secao.appendChild (divv);
+        }
+     
 
-
-
-
-
-
-
-
-
-
-
-
-
+    }   
+}    
+function verificaQuadro(){
+    
+    let input = document.querySelector("#board-size").value;
+    
+    if (input==""){
+        window.alert("Board inválido!");            
+        } else if (input < 5){
+            input = 5;
+        } else if (input > 50){
+            input = 50;
+        }
+        geraQuadro(input);
+}   

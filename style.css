@@ -13,7 +13,8 @@ font-family:monospace;
     border: 1px solid black ;
     display: inline-block;
     padding: 15px;
-    color: white;
+    width:25px;
+    height: 25px;
     font-weight: 800;
 }
 #black{
@@ -27,6 +28,7 @@ font-family:monospace;
 }
 #red{
     background-color: red;
+
 
 }
 #pixel-board{
@@ -45,5 +47,6 @@ font-family:monospace;
 
 #clear-board{
     display: block;
-    pad: 10px;
+    padding: 5px;
 }
+
