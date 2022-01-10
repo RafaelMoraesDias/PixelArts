@@ -20,7 +20,7 @@ font-family:monospace;
 #black{
     background-color: black;
 }
-#green{
+/* #green{
     background-color: green;
 }
 #yellow{
@@ -30,7 +30,7 @@ font-family:monospace;
     background-color: red;
 
 
-}
+} */
 #pixel-board{
     margin-top: 50px;
 }
